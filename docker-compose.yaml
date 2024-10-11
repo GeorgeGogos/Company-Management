@@ -1,0 +1,28 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: companies_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      - DB_USER=postgres
+      - DB_PASSWORD=password
+      - DB_NAME=companies_db
+      - DB_HOST=db
+      - JWT_SECRET=supersecretkey
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+volumes:
+  db-data:
