@@ -36,9 +36,6 @@ go.work.sum
 .idea/
 *.swp
 
-# Docker files
-docker-compose.yml
-Dockerfile
 
 # Database data
 db-data/
