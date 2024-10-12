@@ -2,14 +2,21 @@ FROM golang:1.20-alpine
 
 WORKDIR /app
 
-COPY go.mod ./
-COPY go.sum ./
-RUN go mod download
+# Copy the go.mod and go.sum files if they already exist
+COPY go.mod go.sum ./
 
-COPY . ./
+# If go.mod and go.sum do not exist, initialize a new Go module
+RUN if [ ! -f go.mod ]; then go mod init Company-Management; fi
 
-RUN go build -o /companies-api
+# Download dependencies (if go.mod or go.sum are available)
+RUN go mod tidy
+
+# Copy the entire project (everything else)
+COPY . .
+
+RUN go build -o /Company-Management
 
 EXPOSE 30000
 
-CMD [ "/companies-api" ]
+# Run the executable
+CMD ["/Company-Management"]

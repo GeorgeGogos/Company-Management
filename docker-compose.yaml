@@ -11,6 +11,7 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
       - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
   app:
     build: .
     depends_on:
@@ -24,5 +25,6 @@ services:
       - "30000:30000"
     volumes:
       - .:/app
+    restart: always
 volumes:
   db-data:
