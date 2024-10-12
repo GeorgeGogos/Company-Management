@@ -17,9 +17,6 @@ This is a Golang-based microservice for managing companies. It supports basic CR
 - [Technologies](#technologies)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
-- [API Documentation](#api-documentation)
-- [Database Schema](#database-schema)
-- [Running Tests](#running-tests)
 
 ## Technologies
 
