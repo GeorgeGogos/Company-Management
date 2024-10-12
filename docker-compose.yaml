@@ -10,6 +10,7 @@ services:
       - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
   app:
     build: .
     depends_on:
@@ -19,9 +20,8 @@ services:
       - DB_PASSWORD=password
       - DB_NAME=companies_db
       - DB_HOST=db
-      - JWT_SECRET=supersecretkey
     ports:
-      - "8080:8080"
+      - "30000:30000"
     volumes:
       - .:/app
 volumes:

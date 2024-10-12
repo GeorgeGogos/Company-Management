@@ -1,49 +1,5 @@
-# Binaries for programs and plugins
-*.exe
-*.dll
-*.so
-*.dylib
-*.test
-*.out
 
-# Output of the build process
-/bin/
-/dist/
-/build/
-
-# Configuration files
-*.env
-.env.*
-
-# Logs
-*.log
-/logs
-*.log.*
 
 # Dependency directories (Vendor)
 vendor/
-
-# Go workspace files
-go.work
-go.work.sum
-
-# Go modules
-/go.sum
-/go.mod
-
-# IDE / Text editor directories and files
-.vscode/
-.idea/
-*.swp
-
-
-# Database data
-db-data/
-
-# SQL dump files
-*.sql
-*.sqlite
-*.db
-
-# Cover profile
-coverage.out
+/Company_Management

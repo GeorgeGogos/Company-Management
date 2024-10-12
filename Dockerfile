@@ -10,6 +10,6 @@ COPY . ./
 
 RUN go build -o /companies-api
 
-EXPOSE 8080
+EXPOSE 30000
 
 CMD [ "/companies-api" ]
