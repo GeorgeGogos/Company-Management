@@ -48,4 +48,6 @@ The project is structured to separate different concerns such as controllers, mo
    cd companies-api
 
 2. **Run Service**:
+
+    ```bash
     docker-compose up --build -d 
