@@ -44,8 +44,8 @@ The project is structured to separate different concerns such as controllers, mo
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/companies-api.git
-   cd companies-api
+   git clone https://github.com/GeorgeGogos/Company-Management.git
+   cd Company-Management
 
 2. **Run Service**:
 
